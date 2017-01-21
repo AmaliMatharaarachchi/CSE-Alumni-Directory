@@ -17,14 +17,18 @@ Route::get('/', function () {
 Route::group(['middleware' => ['web']], function () {
 
     Route::get('/register', [
-        'uses' => 'UserController@getDashboard',
+        'uses' => 'PageController@getRegisterPage',
         'as' => 'user_dashboard'
     ]);
 
-    Route::get('/registering', [
+    Route::post('/registering', [
         'uses' => 'User_detailsController@setUser',
         'as' => 'user_registration'
     ]);
 
+    Route::get('/myprofile', [
+        'uses' => 'PageController@getMyProfile',
+        'as' => 'my_profile'
+    ]);
 
 });

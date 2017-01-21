@@ -7,8 +7,8 @@ use DB;
 
 class batch extends Model
 {
-    public  function getBatches(){
-        $batches= DB::select('SELECT DISTINCT batch_name FROM batches');
-        return $batches;
-    }
+//    public  function getBatches(){
+//        $batches= DB::select('SELECT DISTINCT batch_name FROM batches');
+//        return $batches;
+//    }
 }
