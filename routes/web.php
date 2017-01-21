@@ -16,15 +16,15 @@ Route::get('/', function () {
 });
 Route::group(['middleware' => ['web']], function () {
 
-    Route::get('/user', [
+    Route::get('/register', [
         'uses' => 'UserController@getDashboard',
         'as' => 'user_dashboard'
     ]);
 
-    Route::get('/register', [
-        'uses' => 'UserController@setUser',
-        'as' => 'user_registration'
-    ]);
+//    Route::get('/register', [
+//        'uses' => 'UserController@setUser',
+//        'as' => 'user_registration'
+//    ]);
 
 
 });
