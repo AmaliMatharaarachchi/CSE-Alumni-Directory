@@ -1,160 +1,18 @@
 @extends('layouts.master')
 @section('title')
     dashboard
-    @endsection
+@endsection
 @section('head')
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
-    <!-- Favicons
-    ================================================== -->
-    <link rel="shortcut icon" href="images/favicon.html">
-    <link rel="apple-touch-icon" href="images/apple-touch-icon.html">
-    <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.html">
-    <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.html">
-
-    <!-- CSS
-    ================================================== -->
-    <link rel="stylesheet" href="css/style.css" type="text/css">
-    <link rel="stylesheet" href="css/responsive.css" type="text/css">
-
-    <!-- / color -->
-    <link class="colors_style" rel="stylesheet" href="css/color_style/color_1.css" type="text/css"/>
-    <!-- / google font -->
-    <link href='http://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700' rel='stylesheet' type='text/css'>
-    <!-- / settings_box -->
-    <link rel="stylesheet" href="settings_box/settings_box.css" type="text/css">
-
-    <!-- Load jQuery
-    ================================================== -->
-    <script type="text/javascript" src="js/modernizr.custom.js"></script>
-    <script type="text/javascript" src="js/device.min.js"></script>
-    @endsection
+@endsection
 @section('body')
-            <!-- Settings_box -->
-    <div class="settings_box">
-        <p id="box-title">Color Picker</p>
-
-        <a id="panel_toggler" href="javascript:void(0);">
-            <img src="settings_box/settings_icon.png" alt="Color Scheme" />
-        </a>
-
-        <p>Please select your color scheme</p>
-
-        <div id="colors">
-            <a id="color-1" class="current" href="javascript:void(0);" data-href="css/color_style/color_1.css"></a>
-            <a id="color-2" href="javascript:void(0);" data-href="css/color_style/color_2.css"></a>
-            <a id="color-3" href="javascript:void(0);" data-href="css/color_style/color_3.css"></a>
-            <a id="color-4" href="javascript:void(0);" data-href="css/color_style/color_4.css"></a>
-            <a id="color-5" href="javascript:void(0);" data-href="css/color_style/color_5.css"></a>
-            <a id="color-6" href="javascript:void(0);" data-href="css/color_style/color_6.css"></a>
-            <a id="color-7" href="javascript:void(0);" data-href="css/color_style/color_7.css"></a>
-            <a id="color-8" href="javascript:void(0);" data-href="css/color_style/color_8.css"></a>
-            <a id="color-9" href="javascript:void(0);" data-href="css/color_style/color_9.css"></a>
-            <a id="color-10" href="javascript:void(0);" data-href="css/color_style/color_10.css"></a>
-            <a id="color-11" href="javascript:void(0);" data-href="css/color_style/color_11.css"></a>
-            <a id="color-12" href="javascript:void(0);" data-href="css/color_style/color_12.css"></a>
-        </div>
-
-        <div id="box-text">
-            <p>Note:</p>
-
-            <p>Current color palette used for demo purposes. You can have unlimited color options.</p>
-        </div>
-    </div>
-    <!-- /Settings_box -->
 
     <div id="main" class="container">
-        <header id="header">
-            <div class="row">
-                <div class="col-xs-12 col-md-6">
-                    <div class="header-item bg-0">
-                        <div class="line">
-                            <a href="index-2.html" id="header-logo" class="site-logo">University</a>
-
-                            <a href="#" class="custom-btn colored">Apply to University</a>
-                        </div>
-
-                        <div class="line">
-                            <p id="header-slogan">University of modern science</p>
-
-                            <div class="social-btn">
-                                <a class="icon-twitter-bird" href="#"></a>
-                                <a class="icon-linkedin-rect" href="#"></a>
-                                <a class="icon-facebook-rect" href="#"></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-xs-12 col-md-6">
-                    <div class="header-item bg-4">
-                        <a id="menu-open" class="" href="javascript:void(0);">Open Menu<span></span></a>
-
-                        <nav id="navigation" class="header-menu">
-                            <ul>
-                                <li>
-                                    <a href="faculties_1.html">Faculties</a>
-
-                                    <div class="dropdown">
-                                        <ul class="bg-7">
-                                            <li><a href="faculties_1.html">Faculties 1</a></li>
-                                            <li><a href="faculties_2.html">Faculties 2</a></li>
-                                        </ul>
-                                    </div>
-                                </li>
-
-                                <li>
-                                    <a href="academics.html">Academics</a>
-                                </li>
-
-                                <li>
-                                    <a href="courses.html">Courses</a>
-
-                                    <div class="dropdown">
-                                        <ul class="bg-7">
-                                            <li><a href="courses.html">Courses</a></li>
-                                            <li><a href="courses_details.html">Courses Details</a></li>
-                                        </ul>
-                                    </div>
-                                </li>
-
-                                <li>
-                                    <a href="about.html">Pages</a>
-
-                                    <div class="dropdown">
-                                        <ul class="bg-7">
-                                            <li><a href="about.html">About Us</a></li>
-                                            <li><a href="index_2.html">Home 2</a></li>
-                                            <li><a href="login_2.html">Login 2</a></li>
-                                            <li><a href="typography.html">Typography</a></li>
-                                        </ul>
-                                    </div>
-                                </li>
-
-                                <li>
-                                    <a href="contact.html">Contact</a>
-                                </li>
-                            </ul>
-                        </nav>
-
-                        <nav id="submenu" class="header-menu bg-2">
-                            <ul>
-                                <li><a href="campus_locations.html">Campus and locations</a></li>
-                                <li class="current"><a href="directory.html">Directory</a></li>
-                                <li><a href="study_advice.html">Study advice</a></li>
-                                <li><a href="login.html"><i class="icon-user"></i>Login</a></li>
-                            </ul>
-                        </nav>
-                    </div>
-                </div>
-            </div>
-        </header>
 
         <section class="main-content">
             <div class="page-title P30">
                 <h2 class="fl-l">Directory</h2>
-
+                {{--hereeee--}}
                 <a class="share-link fl-r" href="#"><i class="icon-export"></i>Share</a>
             </div>
 
@@ -162,30 +20,75 @@
                 <div class="info-container">
                     <div class="col-xs-12 col-md-6">
                         <div class="info-item box P30 bg-7">
-                            <h3 class="icon-graduation-cap"><span>GET INFO BASED ON YOUR STUDY LEVEL</span></h3>
-
+                            <h3 class="icon-graduation-cap"><span>GET YOURSELF REGISTERED</span></h3>
+                            {{--HEREEEE--}}
                             <form class="info-form" action="#">
                                 <div class="row">
+                                    <div class="row">
+                                        <label>Enter your name</label></div>
+
                                     <div class="col-xs-12 col-md-6">
-                                        <input type="text" placeholder="First Name" />
+                                        <input type="text" placeholder="First Name" id="first_name"/>
                                     </div>
 
                                     <div class="col-xs-12 col-md-6">
-                                        <input type="text" placeholder="Last Name" />
+                                        <input type="text" placeholder="Last Name" id="last_name"/>
                                     </div>
                                 </div>
+
 
                                 <div class="row">
-                                    <div class="col-xs-12 col-md-6">
-                                        <input type="text" placeholder="Your email" />
-                                    </div>
+                                    <label>Select your batch</label></div>
 
-                                    <div class="col-xs-12 col-md-6">
-                                        <input type="text" placeholder="Last Name" />
+                                <div class="col-xs-12 col-md-6">
+                                    <div class="dropdown">
+                                        <select style="color: #0d3625" name="batch" id="batch"
+                                                data-placeholder="batch">
+
+                                            @foreach($batches as $batch)
+                                                <option value={{$batch->batch_name}}>
+                                                    batch {{$batch->batch_name}} </option>
+                                            @endforeach
+
+                                        </select>
                                     </div>
                                 </div>
 
-                                <button class="base-text-color" type="submit">Request Information</button>
+
+                                <div class="row">
+
+                                    <div class="row">
+                                        <label>Enter your home address</label></div>
+
+                                    <div class="col-xs-12 col-md-6">
+                                        <input type="text" placeholder="Address line 1" id="address_1 " required/>
+                                    </div>
+                                    <div class="col-xs-12 col-md-6">
+                                        <input type="text" placeholder="Address line 2" id="address_2"/>
+                                    </div>
+                                    <div class="col-xs-12 col-md-6">
+                                        <input type="text" placeholder="City" id="city" required/>
+                                    </div>
+                                    <div class="col-xs-12 col-md-6">
+                                        <input type="text" placeholder="Country" id="country" required/>
+                                    </div>
+
+                                </div>
+                                <div class="row">
+                                    <div class="row">
+                                        <label>Enter your professional details</label></div>
+                                    <div class="col-xs-12 col-md-6">
+                                        <input type="text" placeholder="Profession" id="profession" required/>
+                                    </div>
+                                    <div class="col-xs-12 col-md-6">
+                                        <input type="text" placeholder="Organization name" id="organization_name" required/>
+                                    </div>
+                                    <div class="col-xs-12 col-md-6">
+                                        <input type="text" placeholder="Organization_address" id="organization_address"/>
+                                    </div>
+
+                                </div>
+                                <button class="base-text-color" type="submit">Register</button>
                             </form>
                         </div>
                     </div>
@@ -198,14 +101,17 @@
                                         <h5>University Resources Spotlight</h5>
 
                                         <p>
-                                            University rare opulent theatre becoming into property from auction gentlemen. Society symbolizing upper to panoramic enthusiast politically educated.
+                                            University rare opulent theatre becoming into property from auction
+                                            gentlemen. Society symbolizing upper to panoramic enthusiast politically
+                                            educated.
                                         </p>
                                     </div>
                                 </div>
 
                                 <div class="col-xs-12 col-sm-9 col-md-7 col-lg-8">
                                     <div class="video box" style="background-image: url(images/video_bg_3.jpg);">
-                                        <a class="video-btn" href="http://player.vimeo.com/video/95974049" data-gallery="portfolio">Play Video</a>
+                                        <a class="video-btn" href="http://player.vimeo.com/video/95974049"
+                                           data-gallery="portfolio">Play Video</a>
                                     </div>
                                 </div>
                             </div>
@@ -220,11 +126,19 @@
                         <h2 class="title">Faculty of Engineering &amp; Computing</h2>
 
                         <p>
-                            Architectural pleasure university politically echelon portfolio de-jour brilliant private engraved. Gilded is the best butler blissfull investments de-jour tailored presidential. Art career brilliant opera society polo presidential. Stockmarket grande cruise solid gilded travel.
+                            Architectural pleasure university politically echelon portfolio de-jour brilliant private
+                            engraved. Gilded is the best butler blissfull investments de-jour tailored presidential. Art
+                            career brilliant opera society polo presidential. Stockmarket grande cruise solid gilded
+                            travel.
                         </p>
 
                         <p>
-                            With career on status townhome rare. Impresario suite university penthouse noble charity gilded designer reserved university. Cutlery caviar enthusiast wishlist on rich. Monogram aristocratic marquis guests lifestyle blissfull benefactor housekeeping expensive classical club benefiting.  Tailored architectural a yacht acumen benefactor sheer. Architectural pleasure elegant stockmarket ladies.Gilded pleasure philanthropic upper educated grande symbolizing cruise architectural genuine.
+                            With career on status townhome rare. Impresario suite university penthouse noble charity
+                            gilded designer reserved university. Cutlery caviar enthusiast wishlist on rich. Monogram
+                            aristocratic marquis guests lifestyle blissfull benefactor housekeeping expensive classical
+                            club benefiting. Tailored architectural a yacht acumen benefactor sheer. Architectural
+                            pleasure elegant stockmarket ladies.Gilded pleasure philanthropic upper educated grande
+                            symbolizing cruise architectural genuine.
                         </p>
 
                         <ul>
@@ -243,7 +157,10 @@
 
                                 <div class="text">
                                     <p>
-                                        Impresario designer in board suite respectable gentlemen cuisine. Manor career symlizing pearl salon designer ilk yacht sterling world manor. Sheer career to brokerage. Portfolio topiary pearl dignified on blissfull solid class champagne handmade symbolizing.
+                                        Impresario designer in board suite respectable gentlemen cuisine. Manor career
+                                        symlizing pearl salon designer ilk yacht sterling world manor. Sheer career to
+                                        brokerage. Portfolio topiary pearl dignified on blissfull solid class champagne
+                                        handmade symbolizing.
                                     </p>
                                 </div>
                             </div>
@@ -251,27 +168,27 @@
 
                         <div class="col-xs-12 col-sm-9 col-md-7 col-lg-8">
                             <div class="col-xs-3 col-sm-4 col-lg-3 team-img-container">
-                                <img class="img-responsive" src="images/users/s1.jpg" alt="demo" />
+                                <img class="img-responsive" src="images/users/s1.jpg" alt="demo"/>
                             </div>
 
                             <div class="col-xs-3 col-sm-4 col-lg-3 team-img-container">
-                                <img class="img-responsive" src="images/users/s2.jpg" alt="demo" />
+                                <img class="img-responsive" src="images/users/s2.jpg" alt="demo"/>
                             </div>
 
                             <div class="col-xs-3 col-sm-4 col-lg-3 team-img-container">
-                                <img class="img-responsive" src="images/users/s3.jpg" alt="demo" />
+                                <img class="img-responsive" src="images/users/s3.jpg" alt="demo"/>
                             </div>
 
                             <div class="col-xs-3 col-sm-4 col-lg-3 team-img-container">
-                                <img class="img-responsive" src="images/users/s4.jpg" alt="demo" />
+                                <img class="img-responsive" src="images/users/s4.jpg" alt="demo"/>
                             </div>
 
                             <div class="col-xs-3 col-sm-4 col-lg-3 team-img-container">
-                                <img class="img-responsive" src="images/users/b1.jpg" alt="demo" />
+                                <img class="img-responsive" src="images/users/b1.jpg" alt="demo"/>
                             </div>
 
                             <div class="col-xs-3 col-sm-8 col-lg-6 col-lg-offset-3 team-img-container">
-                                <img class="img-responsive" src="images/users/b2.jpg" alt="demo" />
+                                <img class="img-responsive" src="images/users/b2.jpg" alt="demo"/>
                             </div>
                         </div>
                     </div>
@@ -284,11 +201,17 @@
                         <h2 class="title">Faculty of Science &amp; Health</h2>
 
                         <p>
-                            Engraved opera respectable engraved rich butler impresario sheer theatre cruise rich. Stockmarket topiary gilded. Member penthouse doctoral enthusiast brokerage marquis wine classical. Blissfull vacation gifted cigar blissfull silk. Designer cruise polo classical upper. Theatre a gold.
+                            Engraved opera respectable engraved rich butler impresario sheer theatre cruise rich.
+                            Stockmarket topiary gilded. Member penthouse doctoral enthusiast brokerage marquis wine
+                            classical. Blissfull vacation gifted cigar blissfull silk. Designer cruise polo classical
+                            upper. Theatre a gold.
                         </p>
 
                         <p>
-                            In crafted member travel symbolizing handmade le fine noble elegant world. Solid benefiting cruise housekeeping pearl impresario wishlist monogram. Investments classical cruise portfolio echelon pedigree symphony le noble manor. On educated benefiting genuine inspiring suite gem high-rise.
+                            In crafted member travel symbolizing handmade le fine noble elegant world. Solid benefiting
+                            cruise housekeeping pearl impresario wishlist monogram. Investments classical cruise
+                            portfolio echelon pedigree symphony le noble manor. On educated benefiting genuine inspiring
+                            suite gem high-rise.
                         </p>
 
                         <ul>
@@ -310,7 +233,9 @@
 
                                 <div class="text">
                                     <p>
-                                        Townhome european board designer de-jour sterling cuisine extra pleasure accredited. On presidential world is the best educated politically brokerage politically portfolio engraved.
+                                        Townhome european board designer de-jour sterling cuisine extra pleasure
+                                        accredited. On presidential world is the best educated politically brokerage
+                                        politically portfolio engraved.
                                     </p>
                                 </div>
 
@@ -320,23 +245,23 @@
 
                         <div class="col-xs-12 col-sm-9 col-md-7 col-lg-8">
                             <div class="col-xs-3 col-sm-6 team-img-container">
-                                <img class="img-responsive" src="images/users/b3.jpg" alt="demo" />
+                                <img class="img-responsive" src="images/users/b3.jpg" alt="demo"/>
                             </div>
 
                             <div class="col-xs-3 col-sm-6 team-img-container">
-                                <img class="img-responsive" src="images/users/b4.jpg" alt="demo" />
+                                <img class="img-responsive" src="images/users/b4.jpg" alt="demo"/>
                             </div>
 
                             <div class="col-xs-3 col-sm-4 col-lg-3 team-img-container">
-                                <img class="img-responsive" src="images/users/s5.jpg" alt="demo" />
+                                <img class="img-responsive" src="images/users/s5.jpg" alt="demo"/>
                             </div>
 
                             <div class="col-xs-3 col-sm-4 col-lg-3 team-img-container">
-                                <img class="img-responsive" src="images/users/s6.jpg" alt="demo" />
+                                <img class="img-responsive" src="images/users/s6.jpg" alt="demo"/>
                             </div>
 
                             <div class="col-xs-3 col-sm-4 col-lg-3 team-img-container">
-                                <img class="img-responsive" src="images/users/s7.jpg" alt="demo" />
+                                <img class="img-responsive" src="images/users/s7.jpg" alt="demo"/>
                             </div>
                         </div>
                     </div>
@@ -349,22 +274,29 @@
                         <h2 class="title">Faculty of Humanities &amp; Social Sciences</h2>
 
                         <p>
-                            Champagne monogram regal suite vacation silk guests. Cuisine townhome enthusiast cigar gifted yacht. Townhome silver extra. European distinctly panoramic affluent distinctly reserved acumen engraved on. Regal guests dynasty panoramic elegant wealth gilded educated pedigree.
+                            Champagne monogram regal suite vacation silk guests. Cuisine townhome enthusiast cigar
+                            gifted yacht. Townhome silver extra. European distinctly panoramic affluent distinctly
+                            reserved acumen engraved on. Regal guests dynasty panoramic elegant wealth gilded educated
+                            pedigree.
                         </p>
 
                         <p>
-                            Society salon property ambassador investments ballroom cigar silver gifted wishlist handmade. Brilliant salon impressive saphire cigar. Estate rare art bonds. Art yacht gifted opulent.
+                            Society salon property ambassador investments ballroom cigar silver gifted wishlist
+                            handmade. Brilliant salon impressive saphire cigar. Estate rare art bonds. Art yacht gifted
+                            opulent.
                         </p>
 
                         <p>
-                            Opulent becoming career panoramic pedigree engraved five-star ambassador upper dignified. Cruise salon fashion first-class aristocratic vacation housekeeping butler.
+                            Opulent becoming career panoramic pedigree engraved five-star ambassador upper dignified.
+                            Cruise salon fashion first-class aristocratic vacation housekeeping butler.
                         </p>
 
                         <ul>
                             <li><a href="#">School of Applied Language &amp; Intercultural Studies</a></li>
                             <li><a href="#">School of Communications</a></li>
                             <li><a href="#">School of Education Studies</a></li>
-                            <li><a href="#">BCCFJ (Business, Communications, Computing, Finance, Journalism and European Languages through Irish)</a></li>
+                            <li><a href="#">BCCFJ (Business, Communications, Computing, Finance, Journalism and European
+                                    Languages through Irish)</a></li>
                             <li><a href="#">School of Law &amp; Government</a></li>
                         </ul>
                     </div>
@@ -378,7 +310,9 @@
 
                                 <div class="text">
                                     <p>
-                                        Panoramic genuine metropolitan rich gem engraved monogram wealth designer. Champagne ornamental pleasure regal wishlist dynasty sport imported townhome. Pearl five
+                                        Panoramic genuine metropolitan rich gem engraved monogram wealth designer.
+                                        Champagne ornamental pleasure regal wishlist dynasty sport imported townhome.
+                                        Pearl five
                                     </p>
                                 </div>
 
@@ -388,11 +322,11 @@
 
                         <div class="col-xs-12 col-sm-9 col-md-7 col-lg-8">
                             <div class="col-xs-3 col-sm-6 team-img-container">
-                                <img class="img-responsive" src="images/users/b5.jpg" alt="demo" />
+                                <img class="img-responsive" src="images/users/b5.jpg" alt="demo"/>
                             </div>
 
                             <div class="col-xs-3 col-sm-6 team-img-container">
-                                <img class="img-responsive" src="images/users/b6.jpg" alt="demo" />
+                                <img class="img-responsive" src="images/users/b6.jpg" alt="demo"/>
                             </div>
                         </div>
                     </div>
@@ -406,7 +340,8 @@
 
                         <div class="text">
                             <p>
-                                University rare opulent theatre becoming into property from auction gentlemen. Society symbolizing upper to panoramic enthusiast politically educated.
+                                University rare opulent theatre becoming into property from auction gentlemen. Society
+                                symbolizing upper to panoramic enthusiast politically educated.
                             </p>
                         </div>
 
@@ -420,7 +355,11 @@
 
                         <div class="text">
                             <p>
-                                Estate blissfull travel benefiting cutlery champagne expensive using. Art lifestyle politically presidential on becoming ornamental. Butler gold auction diamond marquis champagne elegant de-jour. A gilded career gentlemen enthusiast inspiring champagne theatre stockmarket polo. Grande topiary caviar fashion expensive career theatre delegate symbolizing. Rare fashion diamond extra pedigree opera.
+                                Estate blissfull travel benefiting cutlery champagne expensive using. Art lifestyle
+                                politically presidential on becoming ornamental. Butler gold auction diamond marquis
+                                champagne elegant de-jour. A gilded career gentlemen enthusiast inspiring champagne
+                                theatre stockmarket polo. Grande topiary caviar fashion expensive career theatre
+                                delegate symbolizing. Rare fashion diamond extra pedigree opera.
                             </p>
                         </div>
 
@@ -455,7 +394,7 @@
                         <div class="footer-item P30 bg-4">
                             <a href="index-2.html" id="footer-logo" class="site-logo">University</a>
 
-                            <p id="footer-slogan">N°1 american University of<br />modern science</p>
+                            <p id="footer-slogan">N°1 american University of<br/>modern science</p>
 
                             <div class="social-btn el-bottom">
                                 <a class="icon-twitter-bird" href="#"></a>
@@ -467,12 +406,14 @@
 
                     <div class="col-xs-12 col-sm-6 col-md-2">
                         <div class="footer-item P30 bg-4">
-                            <h5><small>Get in Touch</small></h5>
+                            <h5>
+                                <small>Get in Touch</small>
+                            </h5>
 
                             <p>Rockefeller Center, 45 Rockefeller Plaza, New York, NY, USA</p>
 
                             <p class="el-bottom">
-                                P:+1 123 444 5678<br />
+                                P:+1 123 444 5678<br/>
                                 E: <a href="mailto:info@yoursite.com">info@yoursite.com</a>
                             </p>
                         </div>
@@ -480,7 +421,9 @@
 
                     <div class="col-xs-12 col-sm-6 col-md-2">
                         <div class="footer-item P30 bg-2">
-                            <h5><small>Our Twitter</small></h5>
+                            <h5>
+                                <small>Our Twitter</small>
+                            </h5>
 
                             <p>Elegant tailored work society into ornamental opera diplomatatic</p>
 
@@ -490,12 +433,14 @@
 
                     <div class="col-xs-12 col-sm-6 col-md-4">
                         <div class="footer-item footer-item_subscribe P30 bg-1">
-                            <h5><small>Newsletter Subscription</small></h5>
+                            <h5>
+                                <small>Newsletter Subscription</small>
+                            </h5>
 
                             <form id="footer-form" action="#">
                                 <p>Please subscribe to our University newsletters</p>
 
-                                <input type="text" />
+                                <input type="text"/>
 
                                 <button type="submit"><i class="arrow"></i></button>
                             </form>
@@ -511,6 +456,7 @@
     <section id="mobile-menu-container">
         <a href="index_2.html" id="header-logo_2" class="site-logo">University</a>
 
+        <a id="menu-close">Close Menu</a>
         <a id="menu-close" href="javascript:void(0);">Close Menu</a>
 
         <nav id="mobile-navigation" class="mobile-menu">

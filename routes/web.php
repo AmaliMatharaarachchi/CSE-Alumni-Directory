@@ -21,9 +21,10 @@ Route::group(['middleware' => ['web']], function () {
         'as' => 'user_dashboard'
     ]);
 
-    Route::get('/userr',function(){
-        return view("user.dashboard");
-    });
+    Route::get('/register', [
+        'uses' => 'UserController@setUser',
+        'as' => 'user_registration'
+    ]);
 
 
 });
