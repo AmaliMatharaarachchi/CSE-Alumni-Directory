@@ -31,7 +31,7 @@
 
     @yield('head')
 </head>
-<body class="bg-1" >
+<body class="bg-1">
 <div id="main" class="container">
     <header id="header">
         <div class="row">
@@ -119,16 +119,83 @@
             </div>
         </div>
     </header>
-@yield('body')
+    <section class="main-content">
+        <div class="page-title P30">
+    @yield('body')
+            <div class="row">
+                <footer id="footer">
+                    <div class="col-xs-12 col-sm-6 col-md-4">
+                        <div class="footer-item P30 bg-4">
+                            <a href="index-2.html" id="footer-logo" class="site-logo">University</a>
 
-<script type="text/javascript" src="js/jquery-1.11.0.min.js"></script>
-<script type="text/javascript" src="js/jquery.nicescroll.min.js"></script>
-<script type="text/javascript" src="js/jquery.matchHeight-min.js"></script>
-<script type="text/javascript" src="js/jquery.superslides.min.js"></script>
-<script type="text/javascript" src="js/jquery.fs.boxer.min.js"></script>
-<script type="text/javascript" src="js/jquery.easing.js"></script>
-<script type="text/javascript" src="js/jquery.main.js"></script>
-<!-- / settings_box -->
-<script type="text/javascript" src="settings_box/settings_box.js"></script>
+                            <p id="footer-slogan">N°1 american University of<br/>modern science</p>
+
+                            <div class="social-btn el-bottom">
+                                <a class="icon-twitter-bird" href="#"></a>
+                                <a class="icon-linkedin-rect" href="#"></a>
+                                <a class="icon-facebook-rect" href="#"></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-xs-12 col-sm-6 col-md-2">
+                        <div class="footer-item P30 bg-4">
+                            <h5>
+                                <small>Get in Touch</small>
+                            </h5>
+
+                            <p>Rockefeller Center, 45 Rockefeller Plaza, New York, NY, USA</p>
+
+                            <p class="el-bottom">
+                                P:+1 123 444 5678<br/>
+                                E: <a href="mailto:info@yoursite.com">info@yoursite.com</a>
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="col-xs-12 col-sm-6 col-md-2">
+                        <div class="footer-item P30 bg-2">
+                            <h5>
+                                <small>Our Twitter</small>
+                            </h5>
+
+                            <p>Elegant tailored work society into ornamental opera diplomatatic</p>
+
+                            <p class="el-bottom"><a href="#">Follow Us</a></p>
+                        </div>
+                    </div>
+
+                    <div class="col-xs-12 col-sm-6 col-md-4">
+                        <div class="footer-item footer-item_subscribe P30 bg-1">
+                            <h5>
+                                <small>Newsletter Subscription</small>
+                            </h5>
+
+                            <form id="footer-form" action="#">
+                                <p>Please subscribe to our University newsletters</p>
+
+                                <input type="text"/>
+
+                                <button type="submit"><i class="arrow"></i></button>
+                            </form>
+
+                            <p class="el-bottom">&copy; 2013 University Site Name.All rights reserved</p>
+                        </div>
+                    </div>
+                </footer>
+            </div>
+        </div>
+    </section>
+
+    <script type="text/javascript" src="js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="js/jquery.nicescroll.min.js"></script>
+    <script type="text/javascript" src="js/jquery.matchHeight-min.js"></script>
+    <script type="text/javascript" src="js/jquery.superslides.min.js"></script>
+    <script type="text/javascript" src="js/jquery.fs.boxer.min.js"></script>
+    <script type="text/javascript" src="js/jquery.easing.js"></script>
+    <script type="text/javascript" src="js/jquery.main.js"></script>
+    <!-- / settings_box -->
+    <script type="text/javascript" src="settings_box/settings_box.js"></script>
+</div>
 </body>
 </html>
