@@ -21,10 +21,10 @@ Route::group(['middleware' => ['web']], function () {
         'as' => 'user_dashboard'
     ]);
 
-//    Route::get('/register', [
-//        'uses' => 'UserController@setUser',
-//        'as' => 'user_registration'
-//    ]);
+    Route::get('/registering', [
+        'uses' => 'User_detailsController@setUser',
+        'as' => 'user_registration'
+    ]);
 
 
 });

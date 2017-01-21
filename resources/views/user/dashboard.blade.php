@@ -22,17 +22,17 @@
                         <div class="info-item box P30 bg-7">
                             <h3 class="icon-graduation-cap"><span>GET YOURSELF REGISTERED</span></h3>
                             {{--HEREEEE--}}
-                            <form class="info-form" action="#">
+                            <form class="info-form" action='{{route('user_registration')}}'>
                                 <div class="row">
                                     <div class="row">
                                         <label>Enter your name</label></div>
 
                                     <div class="col-xs-12 col-md-6">
-                                        <input type="text" placeholder="First Name" id="first_name"/>
+                                        <input type="text" placeholder="First Name" id="first_name" name="first_name"/>
                                     </div>
 
                                     <div class="col-xs-12 col-md-6">
-                                        <input type="text" placeholder="Last Name" id="last_name"/>
+                                        <input type="text" placeholder="Last Name" id="last_name"name="last_name"/>
                                     </div>
                                 </div>
 
@@ -61,16 +61,16 @@
                                         <label>Enter your home address</label></div>
 
                                     <div class="col-xs-12 col-md-6">
-                                        <input type="text" placeholder="Address line 1" id="address_1 " required/>
+                                        <input type="text" placeholder="Address line 1" id="address_1" name="address1"required/>
                                     </div>
                                     <div class="col-xs-12 col-md-6">
-                                        <input type="text" placeholder="Address line 2" id="address_2"/>
+                                        <input type="text" placeholder="Address line 2" id="address_2" name="address2"/>
                                     </div>
                                     <div class="col-xs-12 col-md-6">
-                                        <input type="text" placeholder="City" id="city" required/>
+                                        <input type="text" placeholder="City" id="city" name="city" required/>
                                     </div>
                                     <div class="col-xs-12 col-md-6">
-                                        <input type="text" placeholder="Country" id="country" required/>
+                                        <input type="text" placeholder="Country" id="country" name="country" required/>
                                     </div>
 
                                 </div>
@@ -78,13 +78,13 @@
                                     <div class="row">
                                         <label>Enter your professional details</label></div>
                                     <div class="col-xs-12 col-md-6">
-                                        <input type="text" placeholder="Profession" id="profession" required/>
+                                        <input type="text" placeholder="Profession" id="profession" name="profession" required/>
                                     </div>
                                     <div class="col-xs-12 col-md-6">
-                                        <input type="text" placeholder="Organization name" id="organization_name" required/>
+                                        <input type="text" placeholder="Organization name" id="organization_name" name="organization_name" required/>
                                     </div>
                                     <div class="col-xs-12 col-md-6">
-                                        <input type="text" placeholder="Organization_address" id="organization_address"/>
+                                        <input type="text" placeholder="Organization_address" id="organization_address" name="organization_address"/>
                                     </div>
 
                                 </div>

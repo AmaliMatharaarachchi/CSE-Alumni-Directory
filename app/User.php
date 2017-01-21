@@ -2,28 +2,25 @@
 
 namespace App;
 
+use Illuminate\Http\Request;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
+use DB;
 
 class User extends Authenticatable
 {
-    use Notifiable;
+    public $first_name;
+    public $last_name;
+    public $batch;
+    public $address1;
+    public $address2;
+    public $city;
+    public $country;
+    public $profession;
+    public $organization_name;
+    public $organization_address;
 
-    /**
-     * The attributes that are mass assignable.
-     *
-     * @var array
-     */
-    protected $fillable = [
-        'name', 'email', 'password',
-    ];
 
-    /**
-     * The attributes that should be hidden for arrays.
-     *
-     * @var array
-     */
-    protected $hidden = [
-        'password', 'remember_token',
-    ];
+
+
 }
