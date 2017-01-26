@@ -23,64 +23,117 @@
         </div>
 
         <div class="row matchHeight-container">
-            <div class="col-xs-12 col-md-6">
-                <div class="info-item P30 bg-7 box">
-                    <h1>University User Login</h1>
+            <div class="info-container">
+                <div class="col-xs-12 col-md-6">
+                    <div class="info-item box P30 bg-7">
+                        <h3 class="icon-graduation-cap"><span>GET YOURSELF REGISTERED</span></h3>
 
-                    <form class="info-form" role="form" method="POST" action="{{ url('/login') }}">
-                        <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
-                            <label for="email" class="col-md-4 control-label">E-Mail Address</label>
+                        <form class="info-form" METHOD="post" action='{{ url('/register') }} '>
+                            {{csrf_field()}}
 
-                            <div class="col-md-6">
-                                <input id="email" type="email" class="form-control" name="email"
-                                       value="{{ old('email') }}" required
-                                       autofocus>
+                            <div class="form-group">
+                                <label for="email" class="col-md-4 control-label">email address</label>
 
-                                @if ($errors->has('email'))
-                                    <span class="help-block">
-                                        <strong>{{ $errors->first('email') }}</strong>
-                                    </span>
-                                @endif
+                                <div class="col-xs-12 col-md-6">
+                                    <input type="email" placeholder="Email Address" id="email" name="email"/>
+                                </div>
                             </div>
-                        </div>
 
-                        <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
-                            <label for="password" class="col-md-4 control-label">Password</label>
 
-                            <div class="col-md-6">
-                                <input id="password" type="password" class="form-control" name="password" required>
+                            <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
+                                <label for="password" class="col-md-4 control-label">Password</label>
 
-                                @if ($errors->has('password'))
-                                    <span class="help-block">
+                                <div class="col-md-6">
+                                    {{--<input id="password" type="password" class="form-control" name="password" required>--}}
+                                    <input id="password" name="password" type="password" pattern="^\S{6,}$"
+                                           onchange="this.setCustomValidity(this.validity.patternMismatch ? 'Must have at least 6 characters' : ''); if(this.checkValidity()) form.confirm_password.pattern = this.value;"
+                                           placeholder="Password" required>
+
+                                    @if ($errors->has('password'))
+                                        <span class="help-block">
                                         <strong>{{ $errors->first('password') }}</strong>
                                     </span>
-                                @endif
+                                    @endif
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="password-confirm" class="col-md-4 control-label">Confirm
+                                        Password</label>
+
+                                    <div class="col-md-6">
+                                        {{--<input id="confirm_password" type="password" class="form-control" name="confirm_password" required>--}}
+
+                                        <input id="confirm_password" name="confirm_password" type="password"
+                                               pattern="^\S{6,}$"
+                                               onchange="this.setCustomValidity(this.validity.patternMismatch ? 'Please enter the same Password as above' : '');"
+                                               placeholder="Verify Password" required>
+                                    </div>
+                                </div>
+
                             </div>
-                        </div>
-                        <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
-                            <label for="password" class="col-md-4 control-label">Password</label>
+                            <button class="base-text-color" type="submit">Send Request</button>
+                        </form>
+                    </div>
+                </div>
 
-                            <div class="col-md-6">
-                                <input id="password" type="password" class="form-control" name="password" required>
-
-                                @if ($errors->has('password'))
-                                    <span class="help-block">
-                        <strong>{{ $errors->first('password') }}</strong>
-                        </span>
-                                @endif
-                            </div>
-                        </div>
-
-                        <p class="remember">
-                            <label style="color: #f9f9f9"><input name="a1" type="checkbox" value=""> <span></span> Remember Me</label>
-
-                            <span class="fl-r"><a href="#" style="color: #f9f9f9">forgot your password?</a></span>
-                        </p>
-
-                        <button class="base-text-color" type="submit">Login</button>
+            </div>
+        </div>
 
 
-                    </form>
+
+        {{--<div class="row matchHeight-container">--}}
+            {{--<div class="col-xs-12 col-md-6">--}}
+                {{--<div class="info-item P30 bg-7 box">--}}
+                    {{--<h1>University User Login</h1>--}}
+
+                    {{--<form class="info-form" role="form" method="POST" action="{{ url('/login') }}">--}}
+                        {{--<div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">--}}
+                            {{--<label for="email" class="col-md-4 control-label">E-Mail Address</label>--}}
+
+                            {{--<div class="col-md-6">--}}
+                                {{--<input id="email" type="email" class="form-control" name="email"--}}
+                                       {{--value="{{ old('email') }}" required>--}}
+
+                                {{--@if ($errors->has('email'))--}}
+                                    {{--<span class="help-block">--}}
+                                        {{--<strong>{{ $errors->first('email') }}</strong>--}}
+                                    {{--</span>--}}
+                                {{--@endif--}}
+                            {{--</div>--}}
+                        {{--</div>--}}
+
+                        {{--<div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">--}}
+                            {{--<label for="password" class="col-md-4 control-label">Password</label>--}}
+
+                            {{--<div class="col-md-6">--}}
+                                {{--<input id="password" type="password" class="form-control" name="password" required>--}}
+
+                                {{--@if ($errors->has('password'))--}}
+                                    {{--<span class="help-block">--}}
+                                        {{--<strong>{{ $errors->first('password') }}</strong>--}}
+                                    {{--</span>--}}
+                                {{--@endif--}}
+                            {{--</div>--}}
+                        {{--</div>--}}
+
+                        {{--<div class="form-group">--}}
+                            {{--<label for="password-confirm" class="col-md-4 control-label">Confirm Password</label>--}}
+
+                            {{--<div class="col-md-6">--}}
+                                {{--<input id="password-confirm" type="password" class="form-control" name="password_confirmation" required>--}}
+                            {{--</div>--}}
+                        {{--</div>--}}
+
+                        {{--<p class="remember">--}}
+                            {{--<label style="color: #f9f9f9"><input name="a1" type="checkbox" value=""> <span></span> Remember Me</label>--}}
+
+                            {{--<span class="fl-r"><a href="#" style="color: #f9f9f9">forgot your password?</a></span>--}}
+                        {{--</p>--}}
+
+                        {{--<button class="base-text-color" type="submit">Login</button>--}}
+
+
+                    {{--</form>--}}
 
 
                     {{--<form class="info-form" role="form" method="POST" action="{{ url('/login') }}">--}}
@@ -136,9 +189,9 @@
 
 
                     {{--</form>--}}
-                </div>
-            </div>
+                {{--</div>--}}
+            {{--</div>--}}
 
-        </div>
+        {{--</div>--}}
     </section>
 @endsection

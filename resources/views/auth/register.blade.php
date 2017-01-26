@@ -34,6 +34,17 @@
                         </div>
 
 
+
+                        <div class="row">
+                            <div class="row">
+                                <label>Enter your email address</label></div>
+
+                            <div class="col-xs-12 col-md-6">
+                                <input type="email" placeholder="Email Address" id="email" name="email"/>
+                            </div>
+                        </div>
+
+
                         <div class="row">
                             <label>Select your batch</label></div>
 
