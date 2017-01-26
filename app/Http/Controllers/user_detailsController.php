@@ -12,7 +12,7 @@ class user_detailsController extends Controller
         $first_name = $request['first_name'];
         $last_name = $request['last_name'];
         $email = $request['email'];
-        $batch = $request['batch'];
+        $batch_id = $request['batch'];
         $address1 = $request['address1'];
         $address2 = $request['address2'];
         $city = $request['city'];
@@ -25,7 +25,7 @@ class user_detailsController extends Controller
 
         $user_detail->first_name = $first_name;
         $user_detail->last_name = $last_name;
-        $user_detail->batch = $batch;
+        $user_detail->batch_id = $batch_id;
         $user_detail->email = $email;
         $user_detail->address1 = $address1;
         $user_detail->address2 = $address2;
