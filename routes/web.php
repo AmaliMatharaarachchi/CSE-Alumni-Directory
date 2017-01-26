@@ -32,3 +32,13 @@ Route::group(['middleware' => ['web']], function () {
     ]);
 
 });
+Route::get('search',function (){
+    return view('user.search');
+});
+Auth::routes();
+
+Route::get('/home', 'HomeController@index');
+Route::get('/login_1', function(){
+    return view('auth.login_1');
+});
+
