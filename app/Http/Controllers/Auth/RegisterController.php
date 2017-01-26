@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Auth;
 
+use App\Http\Controllers\BatchController;
 use App\User;
 use Validator;
 use App\Http\Controllers\Controller;
@@ -68,4 +69,10 @@ class RegisterController extends Controller
             'password' => bcrypt($data['password']),
         ]);
     }
+
+    public function showRegistrationForm()
+    {
+        return view('auth.register',['batches'=>((new BatchController())->getDashboard())]);
+    }
+
 }
