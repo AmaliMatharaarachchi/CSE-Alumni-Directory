@@ -54,8 +54,8 @@
                                         data-placeholder="batch">
 
                                     @foreach($batches as $batch)
-                                        <option value={{$batch}}>
-                                            batch {{$batch}} </option>
+                                        <option value={{$batch->id}}>
+                                            batch {{$batch->batch_name}} </option>
                                     @endforeach
 
                                 </select>
