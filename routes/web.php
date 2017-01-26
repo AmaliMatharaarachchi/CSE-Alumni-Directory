@@ -38,7 +38,8 @@ Route::get('search',function (){
 Auth::routes();
 
 Route::get('/home', 'HomeController@index');
-Route::get('/login_1', function(){
-    return view('auth.login_1');
+
+Route::get('/login', function(){
+    return view('auth.login');
 });
 
