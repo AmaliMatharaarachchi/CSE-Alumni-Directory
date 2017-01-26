@@ -93,7 +93,7 @@ CREATE TABLE IF NOT EXISTS `cse-directory-2`.`user_details` (
   `organization_name` VARCHAR(255) CHARACTER SET 'utf8' NOT NULL,
   `organization_address` VARCHAR(255) CHARACTER SET 'utf8' NULL,
   `batch_id` INT(10) UNSIGNED NOT NULL,
-  `photo` BLOB NULL DEFAULT images/images.jpg,
+  `photo` BLOB,
   PRIMARY KEY (`id`),
   UNIQUE INDEX `user_details_email_unique` (`email` ASC),
   INDEX `fk_user_details_batch1_idx` (`batch_id` ASC),

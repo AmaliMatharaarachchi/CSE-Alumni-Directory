@@ -6,5 +6,5 @@ use Illuminate\Database\Eloquent\Model;
 
 class user_details extends Model
 {
-
+    use UserTrait;
 }

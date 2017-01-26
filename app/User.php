@@ -2,25 +2,20 @@
 
 namespace App;
 
-use Illuminate\Http\Request;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
-use DB;
 
 class User extends Authenticatable
 {
-    public $first_name;
-    public $last_name;
-    public $batch;
-    public $address1;
-    public $address2;
-    public $city;
-    public $country;
-    public $profession;
-    public $organization_name;
-    public $organization_address;
+    use Notifiable;
 
+    protected $table = 'user_details_temp';
 
+    protected $fillable = [
+        'first_name', 'last_name','batch','address1','address2','city','country','profession','organization_name','organization_address',
+    ];
 
-
+    protected $hidden = [
+        'password', 'remember_token',
+    ];
 }
