@@ -31,9 +31,14 @@ Route::group(['middleware' => ['web']], function () {
         'as' => 'my_profile'
     ]);
 
-    Route::post('/searching', [
+    Route::post('/searching_batch', [
         'uses' => 'User_detailsController@getBatch',
         'as' => 'batch_details'
+    ]);
+
+    Route::post('/searching_name', [
+        'uses' => 'User_detailsController@getStudents',
+        'as' => 'details_by_name'
     ]);
 
     Route::get('search',function (){

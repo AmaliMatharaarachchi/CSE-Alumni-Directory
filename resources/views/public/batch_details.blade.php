@@ -1,44 +1,10 @@
-@extends('layouts.master')
-@section('title')
-    dashboard
-@endsection
-@section('head')
+@extends('public.search')
 
-@endsection
-@section('body')
+@section('results')
 
-    <div class="page-title P30">
-        <h2 class="fl-l">add batch name here</h2>
-
-        <a class="share-link fl-r" href="#"><i class="icon-export"></i>Share</a>
-    </div>
 
     <div class="typography">
 
-
-        {{--<div class="row bg-0">--}}
-
-            {{--@foreach($students as $student)--}}
-            {{--<div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">--}}
-
-                    {{--<div class="P30">--}}
-
-                        {{--<h4>{{$student->first_name}} {{$student->last_name}}</h4>--}}
-                        {{--<label>Email Address : {{$student->email}}</label>--}}
-                        {{--<hr>--}}
-                        {{--<label>Home Address : {{$student->address1}} , {{$student->address2}} , {{$student->city}}--}}
-                            {{--, {{$student->country}}</label>--}}
-                        {{--<hr>--}}
-                        {{--<label>Profession : {{$student->profession}}</label>--}}
-                        {{--<hr>--}}
-                        {{--<label>Organization : {{$student->organization_name}} , {{$student->organization_address}}</label>--}}
-
-
-                    {{--</div>--}}
-
-            {{--</div>--}}
-            {{--@endforeach--}}
-        {{--</div>--}}
 
         @foreach($students as $student)
         <div class="col-xs-12 col-md-6" >

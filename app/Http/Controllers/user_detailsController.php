@@ -46,6 +46,14 @@ class user_detailsController extends Controller
 
         $batch=DB::table('user_details')->where('batch_id', $request->batch)->get();
 
-        return view('public.batch_details', ['students'=>$batch]);
+        return view('public.batch_details', ['students'=>$batch, 'batches'=>((new BatchController())->getAll())]);
     }
+    public  function getStudents(Request $request){
+
+        $batch=DB::table('user_details')->where('first_name','like', '%'.$request->name.'%')->orWhere('last_name','like','%'.$request->name.'%')->orWhere('profession','like','%'.$request->name.'%')->orWhere('address1','like','%'.$request->name.'%')->orWhere('address2','like','%'.$request->name.'%')->orWhere('city','like','%'.$request->name.'%')->orWhere('country','like','%'.$request->name.'%')->orWhere('organization_name','like','%'.$request->name.'%')->orWhere('organization_address','like','%'.$request->name.'%')->get();
+
+        return view('public.batch_details', ['students'=>$batch, 'batches'=>((new BatchController())->getAll())]);
+    }
+
+
 }
