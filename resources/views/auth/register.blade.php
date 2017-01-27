@@ -44,10 +44,7 @@
                                 <label for="password" class="col-md-4 control-label">Password</label>
 
                                 <div class="col-md-6">
-                                    {{--<input id="password" type="password" class="form-control" name="password" required>--}}
-                                    <input id="password" name="password" type="password" pattern="^\S{6,}$"
-                                           onchange="this.setCustomValidity(this.validity.patternMismatch ? 'Must have at least 6 characters' : ''); if(this.checkValidity()) form.confirm_password.pattern = this.value;"
-                                           placeholder="Password" required>
+                                    <input id="password" name="password" type="password" required>
 
                                     @if ($errors->has('password'))
                                         <span class="help-block">
@@ -63,10 +60,7 @@
                                     <div class="col-md-6">
                                         {{--<input id="confirm_password" type="password" class="form-control" name="confirm_password" required>--}}
 
-                                        <input id="confirm_password" name="confirm_password" type="password"
-                                               pattern="^\S{6,}$"
-                                               onchange="this.setCustomValidity(this.validity.patternMismatch ? 'Please enter the same Password as above' : '');"
-                                               placeholder="Verify Password" required>
+                                        <input id="confirm_password" name="password_confirmation" type="password" required>
                                     </div>
                                 </div>
 
@@ -78,119 +72,5 @@
 
             </div>
         </div>
-
-
-        {{--<div class="row matchHeight-container">--}}
-        {{--<div class="col-xs-12 col-md-6">--}}
-        {{--<div class="info-item P30 bg-7 box">--}}
-        {{--<h1>University User Login</h1>--}}
-
-        {{--<form class="info-form" role="form" method="POST" action="{{ url('/login') }}">--}}
-        {{--<div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">--}}
-        {{--<label for="email" class="col-md-4 control-label">E-Mail Address</label>--}}
-
-        {{--<div class="col-md-6">--}}
-        {{--<input id="email" type="email" class="form-control" name="email"--}}
-        {{--value="{{ old('email') }}" required>--}}
-
-        {{--@if ($errors->has('email'))--}}
-        {{--<span class="help-block">--}}
-        {{--<strong>{{ $errors->first('email') }}</strong>--}}
-        {{--</span>--}}
-        {{--@endif--}}
-        {{--</div>--}}
-        {{--</div>--}}
-
-        {{--<div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">--}}
-        {{--<label for="password" class="col-md-4 control-label">Password</label>--}}
-
-        {{--<div class="col-md-6">--}}
-        {{--<input id="password" type="password" class="form-control" name="password" required>--}}
-
-        {{--@if ($errors->has('password'))--}}
-        {{--<span class="help-block">--}}
-        {{--<strong>{{ $errors->first('password') }}</strong>--}}
-        {{--</span>--}}
-        {{--@endif--}}
-        {{--</div>--}}
-        {{--</div>--}}
-
-        {{--<div class="form-group">--}}
-        {{--<label for="password-confirm" class="col-md-4 control-label">Confirm Password</label>--}}
-
-        {{--<div class="col-md-6">--}}
-        {{--<input id="password-confirm" type="password" class="form-control" name="password_confirmation" required>--}}
-        {{--</div>--}}
-        {{--</div>--}}
-
-        {{--<p class="remember">--}}
-        {{--<label style="color: #f9f9f9"><input name="a1" type="checkbox" value=""> <span></span> Remember Me</label>--}}
-
-        {{--<span class="fl-r"><a href="#" style="color: #f9f9f9">forgot your password?</a></span>--}}
-        {{--</p>--}}
-
-        {{--<button class="base-text-color" type="submit">Login</button>--}}
-
-
-        {{--</form>--}}
-
-
-        {{--<form class="info-form" role="form" method="POST" action="{{ url('/login') }}">--}}
-        {{--{{ csrf_field() }}--}}
-        {{--<div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">--}}
-        {{--<label for="email" class="col-md-4 control-label">E-Mail Address</label>--}}
-
-        {{--<div class="col-md-6">--}}
-        {{--<input id="email" type="email" class="form-control" name="email"--}}
-        {{--value="{{ old('email') }}" required--}}
-        {{--autofocus>--}}
-
-        {{--@if ($errors->has('email'))--}}
-        {{--<span class="help-block">--}}
-        {{--<strong>{{ $errors->first('email') }}</strong>--}}
-        {{--</span>--}}
-        {{--@endif--}}
-        {{--</div>--}}
-        {{--</div>--}}
-
-        {{--<div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">--}}
-        {{--<label for="password" class="col-md-4 control-label">Password</label>--}}
-
-        {{--<div class="col-md-6">--}}
-        {{--<input id="password" type="password" class="form-control" name="password" required>--}}
-
-        {{--@if ($errors->has('password'))--}}
-        {{--<span class="help-block">--}}
-        {{--<strong>{{ $errors->first('password') }}</strong>--}}
-        {{--</span>--}}
-        {{--@endif--}}
-        {{--</div>--}}
-        {{--</div>--}}
-
-        {{--<div class="form-group">--}}
-        {{--<div class="col-md-6 col-md-offset-4">--}}
-        {{--<p class="remember">--}}
-        {{--<label><input name="a1" type="checkbox" value=""> <span></span> Remember Me</label>--}}
-
-        {{--<span class="fl-r"><a href="#">forgot your password?</a></span>--}}
-        {{--</p>--}}
-        {{--</div>--}}
-        {{--</div>--}}
-
-        {{--<div class="form-group">--}}
-        {{--<div class="col-md-6 col-md-offset-4">--}}
-
-        {{--<button class="base-text-color" type="submit">Login</button>--}}
-
-        {{--</div>--}}
-
-        {{--</div>--}}
-
-
-        {{--</form>--}}
-        {{--</div>--}}
-        {{--</div>--}}
-
-        {{--</div>--}}
     </section>
 @endsection
