@@ -50,7 +50,7 @@ class RegisterController extends Controller
     {
         return Validator::make($data, [
             'name' => 'required|max:255',
-            'email' => 'required|email|max:255|unique:user_details',
+            'email' => 'required|email|max:255|unique:user',
             //'password' => 'required|min:6|confirmed',
         ]);
     }
@@ -70,9 +70,6 @@ class RegisterController extends Controller
         ]);
     }
 
-    public function showRegistrationForm()
-    {
-        return view('auth.register',['batches'=>((new BatchController())->getDashboard())]);
-    }
+
 
 }

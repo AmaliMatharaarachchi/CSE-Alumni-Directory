@@ -26,9 +26,9 @@
             <div class="info-container">
                 <div class="col-xs-12 col-md-6">
                     <div class="info-item box P30 bg-7">
-                        <h3 class="icon-graduation-cap"><span>GET YOURSELF REGISTERED</span></h3>
+                        <h3 class="icon-graduation-cap"><span>LOG IN</span></h3>
 
-                        <form class="info-form" METHOD="post" action='{{ url('/register') }} '>
+                        <form class="info-form" METHOD="post" action='{{ url('/login') }} '>
                             {{csrf_field()}}
 
                             <div class="form-group">
@@ -45,33 +45,16 @@
 
                                 <div class="col-md-6">
                                     {{--<input id="password" type="password" class="form-control" name="password" required>--}}
-                                    <input id="password" name="password" type="password" pattern="^\S{6,}$"
-                                           onchange="this.setCustomValidity(this.validity.patternMismatch ? 'Must have at least 6 characters' : ''); if(this.checkValidity()) form.confirm_password.pattern = this.value;"
-                                           placeholder="Password" required>
+                                    <input id="password" name="password" type="password" placeholder="Password" required>
 
-                                    @if ($errors->has('password'))
-                                        <span class="help-block">
-                                        <strong>{{ $errors->first('password') }}</strong>
-                                    </span>
-                                    @endif
+
                                 </div>
 
-                                <div class="form-group">
-                                    <label for="password-confirm" class="col-md-4 control-label">Confirm
-                                        Password</label>
 
-                                    <div class="col-md-6">
-                                        {{--<input id="confirm_password" type="password" class="form-control" name="confirm_password" required>--}}
 
-                                        <input id="confirm_password" name="confirm_password" type="password"
-                                               pattern="^\S{6,}$"
-                                               onchange="this.setCustomValidity(this.validity.patternMismatch ? 'Please enter the same Password as above' : '');"
-                                               placeholder="Verify Password" required>
-                                    </div>
-                                </div>
 
                             </div>
-                            <button class="base-text-color" type="submit">Send Request</button>
+                            <button class="base-text-color" type="submit">Log In</button>
                         </form>
                     </div>
                 </div>

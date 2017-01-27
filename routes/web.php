@@ -16,13 +16,13 @@ Route::get('/', function () {
 });
 Route::group(['middleware' => ['web']], function () {
 
-    Route::get('/register', [
+    Route::get('/request', [
         'uses' => 'PageController@getRegisterPage',
         'as' => 'user_dashboard'
     ]);
 
     Route::post('/registering', [
-        'uses' => 'User_detailsController@setUser',
+        'uses' => 'User_details_tempController@setUser',
         'as' => 'user_registration'
     ]);
 
@@ -43,3 +43,7 @@ Route::get('/login', function(){
     return view('auth.login');
 });
 
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index');
