@@ -11,15 +11,29 @@
     <div class="row matchHeight-container">
         <div class="col-xs-12 col-md-6">
             <div class="info-item box P30 bg-7 corner">
-                <h1>Search the CSE Alumni Directory</h1>
+                <h1>CSE Alumni Directory</h1>
 
-                <form class="info-form" action="http://idealui.com/">
+                <form class="info-form" METHOD="post" action='{{ route('batch_details') }} '>
+                    {{csrf_field()}}
 
-                    <input type="text" placeholder="First Name"/>
+                    <div class="row">
+                        <label>Select your batch</label></div>
 
-                    <input type="text" placeholder="Last Name"/>
+                    <div class="row">
+                        <div class="dropdown">
+                            <select style="color: #0d3625" name="batch" id="batch"
+                                    data-placeholder="batch">
 
-                    <button class="base-text-color" type="submit"><i class="icon-search"></i>Find Person</button>
+                                @foreach($batches as $batch)
+                                    <option value={{$batch->batch_id}}>
+                                        batch {{$batch->batch_name}} </option>
+                                @endforeach
+
+                            </select>
+                        </div>
+                    </div>
+
+                    <button class="base-text-color" type="submit">GO</button>
                 </form>
             </div>
         </div>

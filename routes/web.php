@@ -31,19 +31,25 @@ Route::group(['middleware' => ['web']], function () {
         'as' => 'my_profile'
     ]);
 
+    Route::post('/searching', [
+        'uses' => 'User_detailsController@getBatch',
+        'as' => 'batch_details'
+    ]);
+
+    Route::get('search',function (){
+        return view('public.search');
+    });
+
+    Route::get('/search', [
+        'uses' => 'PageController@getSearchPage',
+        'as' => 'public_search'
+    ]);
 });
-Route::get('search',function (){
-    return view('user.search');
-});
+
+
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index');
 
-Route::get('/login', function(){
-    return view('auth.login');
-});
 
-
-Auth::routes();
-
-Route::get('/home', 'HomeController@index');
