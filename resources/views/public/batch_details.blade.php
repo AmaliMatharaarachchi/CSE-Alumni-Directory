@@ -47,6 +47,7 @@
                     <div class="col-xs-12 col-sm-3 col-md-5 col-lg-4">
                         <div class="column-description1 bg-4 corner">
                             {{--<img class="img-responsive" src="/images/people/profile.jpg" alt="profile" />--}}
+
                         </div>
                     </div>
 

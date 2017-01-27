@@ -16,10 +16,10 @@
                 <form class="info-form" METHOD="post" action='{{ route('batch_details') }} '>
                     {{csrf_field()}}
 
-                    <div class="row">
-                        <label>Select your batch</label></div>
+                    <div class="col-md-3">
+                        <label>Select by batch : </label></div>
 
-                    <div class="row">
+                    <div class="col-md-3">
                         <div class="dropdown">
                             <select style="color: #0d3625" name="batch" id="batch"
                                     data-placeholder="batch">
@@ -30,10 +30,15 @@
                                 @endforeach
 
                             </select>
+
+
                         </div>
                     </div>
+                    <div class="col-md-6">
+                        <button class="base-text-color" type="submit">GO</button>
+                    </div>
 
-                    <button class="base-text-color" type="submit">GO</button>
+
                 </form>
             </div>
         </div>

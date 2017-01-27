@@ -8,38 +8,46 @@
 @section('body')
 
 
-            <div class="page-title P30">
-                <h2 class="fl-l">My Profile</h2>
+    <div class="page-title P30">
+        <h2 class="fl-l">My Profile</h2>
 
-                <a class="share-link fl-r" href="#"><i class="icon-export"></i>Share</a>
+        <a class="share-link fl-r" href="#"><i class="icon-export"></i>Share</a>
+    </div>
+
+
+    <div class="row">
+        <div class="post-item">
+
+            {{csrf_field()}}
+            <div class="col-md-6">
+                <div class="column-description box P30 bg-2 corner">
+                    <h1>first name last name</h1>
+
+                </div>
             </div>
 
-
-            <div class="row">
-                <div class="post-item">
-
+            <div class="col-xs-12 col-sm-9 col-md-7 col-lg-6">
+                <div class="P30 bg-0">
                     <div class="col-md-6">
-                        <div class="column-description box P30 bg-2 corner">
-                            <h1>first name last name</h1>
+                        <div class="text-center">
+                            <form class="form-horizontal" METHOD="post" action='# '>
+                                <img src="images/images.jpg" class="avatar img-circle" alt="avatar">
 
+                                <h6>Upload a different photo...</h6>
+
+
+                                <input class="form-group" id="file-type" type="file" size="4" name="file"/>
+
+
+                                <button class="base-text-color" type="submit">Change</button>
+
+
+                            </form>
                         </div>
+
                     </div>
 
-                    <div class="col-xs-12 col-sm-9 col-md-7 col-lg-6">
-                        <div class="P30 bg-0">
-                            <div class="col-md-6">
-                                <div class="text-center">
-                                    <img src="images/images.jpg" class="avatar img-circle" alt="avatar">
 
-                                    <h6>Upload a different photo...</h6>
-
-                                    <input class="form-control" type="file">
-                                </div>
-                            </div>
-
-
-                        </div>
-                    </div>
                 </div>
             </div>
 
@@ -222,9 +230,6 @@
                 </div>
             </div>
 
-
-
-
-
-
+         </div>
+    </div>
 @endsection

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\user_details;
 use Illuminate\Http\Request;
+use DB;
 
 class user_detailsController extends Controller
 {
@@ -39,5 +40,12 @@ class user_detailsController extends Controller
 
 //        DB::statement('insert into user_details(first_name,last_name,batch,address1,address2,city,country,profession,organization_name,organization_address) values(?,?,?,?,?,?,?,?,?,?)',[$first_name,$last_name,$batch,$address1,$address2,$city,$country,$profession,$organization_name,$organization_address]);
         return redirect()->back();
+    }
+
+    public  function getBatch(Request $request){
+
+        $batch=DB::table('user_details')->where('batch_id', $request->batch)->get();
+
+        return view('public.batch_details', ['students'=>$batch]);
     }
 }
