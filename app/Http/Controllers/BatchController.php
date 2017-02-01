@@ -9,7 +9,7 @@ use DB;
 class BatchController extends Controller
 {
     public function getDashboard(){
-        $batches=DB::table('batches')->pluck("batch_name");
+        $batches=DB::table('batch')->get();
         return $batches;
     }
 

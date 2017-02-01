@@ -17,7 +17,7 @@
                 <div class="info-item box P30 bg-7">
                     <h3 class="icon-graduation-cap"><span>GET YOURSELF REGISTERED</span></h3>
 
-                    <form class="info-form" METHOD="post" action='{{route('user_registration')}} '>
+                    <form class="info-form" METHOD="post" action='{{ route('user_registration') }} '>
                         {{csrf_field()}}
 
                         <div class="row">
@@ -34,6 +34,17 @@
                         </div>
 
 
+
+                        <div class="row">
+                            <div class="row">
+                                <label>Enter your email address</label></div>
+
+                            <div class="col-xs-12 col-md-6">
+                                <input type="email" placeholder="Email Address" id="email" name="email"/>
+                            </div>
+                        </div>
+
+
                         <div class="row">
                             <label>Select your batch</label></div>
 
@@ -43,8 +54,8 @@
                                         data-placeholder="batch">
 
                                     @foreach($batches as $batch)
-                                        <option value={{$batch}}>
-                                            batch {{$batch}} </option>
+                                        <option value={{$batch->batch_id}}>
+                                            batch {{$batch->batch_name}} </option>
                                     @endforeach
 
                                 </select>
@@ -89,42 +100,11 @@
                             </div>
 
                         </div>
-                        <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
-                            <label for="password" class="col-md-4 control-label">Password</label>
 
-                            <div class="col-md-6">
-                                {{--<input id="password" type="password" class="form-control" name="password" required>--}}
-                                <input id="password" name="password" type="password" pattern="^\S{6,}$"
-                                       onchange="this.setCustomValidity(this.validity.patternMismatch ? 'Must have at least 6 characters' : ''); if(this.checkValidity()) form.confirm_password.pattern = this.value;"
-                                       placeholder="Password" required>
-
-                                @if ($errors->has('password'))
-                                    <span class="help-block">
-                                        <strong>{{ $errors->first('password') }}</strong>
-                                    </span>
-                                @endif
-                            </div>
-
-                            <div class="form-group">
-                                <label for="password-confirm" class="col-md-4 control-label">Confirm
-                                    Password</label>
-
-                                <div class="col-md-6">
-                                    {{--<input id="confirm_password" type="password" class="form-control" name="confirm_password" required>--}}
-
-                                    <input id="confirm_password" name="confirm_password" type="password"
-                                           pattern="^\S{6,}$"
-                                           onchange="this.setCustomValidity(this.validity.patternMismatch ? 'Please enter the same Password as above' : '');"
-                                           placeholder="Verify Password" required>
-                                </div>
-                            </div>
-
-                        </div>
                         <button class="base-text-color" type="submit">Send Request</button>
                     </form>
                 </div>
             </div>
-
 
         </div>
     </div>

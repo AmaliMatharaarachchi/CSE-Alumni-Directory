@@ -18,7 +18,7 @@
     <link rel="stylesheet" href="css/responsive.css" type="text/css">
 
     <!-- / color -->
-    <link class="colors_style" rel="stylesheet" href="css/color_style/color_6.css" type="text/css"/>
+    <link class="colors_style" rel="stylesheet" href="css/color_style/color_10.css" type="text/css"/>
     <!-- / google font -->
     <link href='http://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700' rel='stylesheet' type='text/css'>
     <!-- / settings_box -->

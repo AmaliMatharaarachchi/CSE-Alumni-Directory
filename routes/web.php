@@ -16,13 +16,13 @@ Route::get('/', function () {
 });
 Route::group(['middleware' => ['web']], function () {
 
-    Route::get('/register', [
+    Route::get('/request', [
         'uses' => 'PageController@getRegisterPage',
         'as' => 'user_dashboard'
     ]);
 
     Route::post('/registering', [
-        'uses' => 'User_detailsController@setUser',
+        'uses' => 'User_details_tempController@setUser',
         'as' => 'user_registration'
     ]);
 
@@ -31,4 +31,23 @@ Route::group(['middleware' => ['web']], function () {
         'as' => 'my_profile'
     ]);
 
+    Route::post('/searching', [
+        'uses' => 'User_detailsController@getBatch',
+        'as' => 'batch_details'
+    ]);
+
+    Route::get('search',function (){
+        return view('public.search');
+    });
+
+    Route::get('/search', [
+        'uses' => 'PageController@getSearchPage',
+        'as' => 'public_search'
+    ]);
 });
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index');
+
+
